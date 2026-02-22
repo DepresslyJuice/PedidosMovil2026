@@ -1,0 +1,13 @@
+package org.examplel.pedidos.dto;
+
+import jakarta.validation.constraints.*;
+import lombok.Data;
+
+@Data
+public class LoginRequest {
+    @NotBlank(message = "El username es obligatorio")
+    private String username;
+    
+    @NotBlank(message = "La contraseña es obligatoria")
+    private String password;
+}

@@ -1,0 +1,20 @@
+meta {
+  name: GetPedidos
+  type: http
+  seq: 5
+}
+
+get {
+  url: www.localhost:8080/api/orders
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJjbGllbnRlMiIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzcxNjg2NzAwLCJleHAiOjE3NzE3NzMxMDB9.Y-gsgnMzZ2TWfPSgIx-OU105L9DlsnLDP6uylCw81v6uqwCfJ8RjCGKkv1VQNd7M
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

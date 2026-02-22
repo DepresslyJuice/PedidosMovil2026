@@ -1,0 +1,41 @@
+meta {
+  name: CrearPedido
+  type: http
+  seq: 4
+}
+
+post {
+  url: www.localhost:8080/api/orders
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJjbGllbnRlMiIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzcxNjQ1MTE2LCJleHAiOjE3NzE3MzE1MTZ9.qwvQ7juQatpEywuKcAJSFICMZ6fyo6JWuevvLTO6ghfUuna7k9XWDrgregbVlj56
+}
+
+body:json {
+  {
+    "direccion": "aca",
+    "detallePedido": "10 cajas de producto A, 5 unidades de producto B",
+    "tipoPago": "efectivo",
+    "fotoBase64": "/9j/4AAQSkZJRgABAQEAYABgAAD...",  
+    "latitud": -0.1807,
+    "longitud": -78.4678,
+    "productos": [
+      {
+        "productoId": 1,
+        "cantidad": 10
+      },
+      {
+        "productoId": 2,
+        "cantidad": 5
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
